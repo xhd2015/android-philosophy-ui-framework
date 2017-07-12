@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="fulton.shaw.android.tellme"
+    android:versionCode="1"
+    android:versionName="1.0">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/icon"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/icon"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat.NoActionBar">
+
+        <!-- android:theme="@style/AppTheme" -->
+        <activity
+            android:name=".newdesign.ViewPagerActivity"
+            android:label="@string/app_name">
+            <intent-filter>
+
+                <!-- <action android:name="android.intent.action.MAIN" / -->
+                <category android:name="android.intent.category.DEFAULT" />
+                <!-- category android:name="android.intent.category.LAUNCHER" / -->
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".experiment.HasActionBarActivity"
+            android:label="With A Tool Bar">
+            <intent-filter>
+
+                <!-- <action android:name="android.intent.action.MAIN" /> -->
+                <category android:name="android.intent.category.DEFAULT" />
+                <!-- category android:name="android.intent.category.LAUNCHER" / -->
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".experiment.WeChatActivity"
+            android:label="Wechat Like">
+            <intent-filter>
+                <!--action android:name="android.intent.action.MAIN" /-->
+                <category android:name="android.intent.category.DEFAULT"/>
+                <!--category android:name="android.intent.category.LAUNCHER" /-->
+            </intent-filter>
+        </activity>
+        <activity android:name=".experiment.CalendarActivity"
+            android:label="Calendar"
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name=".experiment.EchoIntentService"
+            android:exported="false" />
+
+
+    </application>
+
+</manifest>

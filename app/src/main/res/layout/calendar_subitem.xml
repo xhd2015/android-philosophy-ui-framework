@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="50dp"
+    android:layout_height="70dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/date_number"
+        style="@style/center_text_in_textview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="15"
+        android:gravity="center"
+        android:text="1"
+        android:textAlignment="center"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        android:background="@color/aqua_little"
+        />
+
+    <TextView
+        android:id="@+id/date_note"
+        style="@style/center_marquee"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="5"
+        android:background="@color/red_little"
+        android:text="Labor Day What is The fu"
+        android:textSize="8sp"
+
+        />
+</LinearLayout>

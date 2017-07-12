@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="spinnerTypes">
+        <item>Yahoo</item>
+        <item>Zhihu</item>
+        <item>Baidu Answer</item>
+        <item>Guokr</item>
+        <item>Stackoverflow</item>
+        <item>Askubuntu</item>
+    </string-array>
+    <string-array name="ask_types">
+        <item>Stackoverflow</item>
+        <item>Yahoo Answer</item>
+        <item>Baidu Answer</item>
+    </string-array>
+    <string-array name="known_bugs">
+        <item>App crash on screen rotation</item>
+        <item>Indirect while slading into other tabs</item>
+   		<item></item>
+    </string-array>
+    <string-array name="references">
+        <!-- for selector,how to change button style -->
+        <item>http://stackoverflow.com/questions/4489069/android-button-style</item>
+    	<item>http://stackoverflow.com/questions/6674341/how-to-use-scrollview-in-android</item>
+        <item>http://stackoverflow.com/questions/3769762/android-color-xml-resource-file</item>
+    	<item>http://stackoverflow.com/questions/10258772/android-webview-savestate</item>
+ 		<item>http://stackoverflow.com/questions/2201917/how-can-i-open-a-url-in-androids-web-browser-from-my-application</item>
+   		<!-- to use webclientview  -->
+ 			<item>http://www.cnblogs.com/menlsh/p/3139498.html</item>
+ 		<!-- left+right using linear -->
+ 		<item>http://www.cnblogs.com/xiaoran1129/archive/2013/03/26/2982954.html</item>
+ 			</string-array>
+</resources>
