@@ -4,6 +4,9 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Tellme-AS.iml" filepath="$PROJECT_DIR$/Tellme-AS.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mytestapplication/mytestapplication.iml" filepath="$PROJECT_DIR$/mytestapplication/mytestapplication.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tellmelibrary/tellmelibrary.iml" filepath="$PROJECT_DIR$/tellmelibrary/tellmelibrary.iml" />
+      <module fileurl="file://$PROJECT_DIR$/x/x.iml" filepath="$PROJECT_DIR$/x/x.iml" />
     </modules>
   </component>
 </project>

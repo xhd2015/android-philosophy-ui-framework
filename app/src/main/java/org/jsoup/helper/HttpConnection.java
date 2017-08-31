@@ -299,7 +299,7 @@ public class HttpConnection implements Connection {
         public T header(String name, String value) {
             Validate.notEmpty(name, "Header name must not be empty");
             Validate.notNull(value, "Header value must not be null");
-            removeHeader(name); // ensures we don't get an "accept-encoding" and a "Accept-Encoding"
+            removeHeader(name); // ensures we don't getByGetter an "accept-encoding" and a "Accept-Encoding"
             headers.put(name, value);
             return (T) this;
         }
@@ -580,7 +580,7 @@ public class HttpConnection implements Connection {
                 // redirect if there's a location header (from 3xx, or 201 etc)
                 if (res.hasHeader(LOCATION) && req.followRedirects()) {
                     if (status != HTTP_TEMP_REDIR) {
-                        req.method(Method.GET); // always redirect with a get. any data param from original req are dropped.
+                        req.method(Method.GET); // always redirect with a getByGetter. any data param from original req are dropped.
                         req.data().clear();
                     }
 
@@ -662,7 +662,7 @@ public class HttpConnection implements Connection {
         }
 
         public Document parse() throws IOException {
-            Validate.isTrue(executed, "Request must be executed (with .execute(), .get(), or .post() before parsing response");
+            Validate.isTrue(executed, "Request must be executed (with .execute(), .getByGetter(), or .post() before parsing response");
             Document doc = DataUtil.parseByteData(byteData, charset, url.toExternalForm(), req.parser());
             byteData.rewind();
             charset = doc.outputSettings().charset().name(); // update charset from meta-equiv, possibly
@@ -670,7 +670,7 @@ public class HttpConnection implements Connection {
         }
 
         public String body() {
-            Validate.isTrue(executed, "Request must be executed (with .execute(), .get(), or .post() before getting response body");
+            Validate.isTrue(executed, "Request must be executed (with .execute(), .getByGetter(), or .post() before getting response body");
             // charset gets set from header on execute, and from meta-equiv on parse. parse may not have happened yet
             String body;
             if (charset == null)
@@ -682,7 +682,7 @@ public class HttpConnection implements Connection {
         }
 
         public byte[] bodyAsBytes() {
-            Validate.isTrue(executed, "Request must be executed (with .execute(), .get(), or .post() before getting response body");
+            Validate.isTrue(executed, "Request must be executed (with .execute(), .getByGetter(), or .post() before getting response body");
             return byteData.array();
         }
 
@@ -932,7 +932,7 @@ public class HttpConnection implements Connection {
             return sb.toString();
         }
 
-        // for get url reqs, serialise the data map into the url
+        // for getByGetter url reqs, serialise the data map into the url
         private static void serialiseRequestUrl(Connection.Request req) throws IOException {
             URL in = req.url();
             StringBuilder url = new StringBuilder();
@@ -960,7 +960,7 @@ public class HttpConnection implements Connection {
                     .append(URLEncoder.encode(keyVal.value(), DataUtil.defaultCharset));
             }
             req.url(new URL(url.toString()));
-            req.data().clear(); // moved into url as get params
+            req.data().clear(); // moved into url as getByGetter params
         }
     }
 

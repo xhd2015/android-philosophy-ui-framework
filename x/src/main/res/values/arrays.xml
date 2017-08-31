@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="support_types">
+        <!--for every classification-->
+        <item  name="plan">计划</item>
+        <item name="travelRecords">出行记录</item>
+        <item name="note">日记</item>
+        <item>日志(Blog)</item>
+        <item name="problem">问题</item>
+
+        <item name="literal">文学评价</item>
+        <item>常识</item>
+        <item>物品价格</item>
+        <item>ER图</item>
+        <item>流程图</item>
+
+        <item>关联图</item>
+        <item>说点什么</item>
+
+    </string-array>
+
+
+    <array name="test_iamges">
+        <item>@android:drawable/alert_dark_frame</item>
+        <item>@android:drawable/alert_light_frame</item>
+    </array>
+
+    <array name="test_indicator">
+        <item>@color/aqua</item>
+        <item>@color/blue</item>
+        <item>@color/green</item>
+    </array>
+
+    <string-array name="alarmRepeatTypes">
+        <item>设置重复...</item>
+        <item>仅一次</item>
+        <item>每天</item>
+        <item>每周</item>
+        <item>每月</item>
+        <item>每年</item>
+    </string-array>
+    <string-array name="filterConditionTypes">
+        <item>包含任意一个选定的标签</item>
+        <item>包含所有选定的标签</item>
+        <item>不包含任意一个选定的标签</item>
+    </string-array>
+
+    <string-array name="dateModelTypes">
+        <item>所有日期</item>
+        <item>最近几天</item>
+        <item>从开始时间到结束时间</item>
+        <item>从开始时间以来的几天内</item>
+        <item>从开始时间以来</item>
+        <item>到结束时间</item>
+        <item>本周至今天</item>
+    </string-array>
+
+    <string-array name="dayOfWeek">
+        <item>星期日</item>
+        <item>星期一</item>
+        <item>星期二</item>
+        <item>星期三</item>
+        <item>星期四</item>
+        <item>星期五</item>
+        <item>星期六</item>
+    </string-array>
+
+
+    <string-array name="testFiller">
+        <item>1表</item>
+        <item>2表</item>
+        <item>3表</item>
+    </string-array>
+
+
+    <string-array name="incomeType">
+        <item>支出</item>
+        <item>收入</item>
+    </string-array>
+
+    <string-array name="listType">
+        <item>相关列表</item>
+        <item>评论列表</item>
+        <item>标签列表</item>
+        <item>提醒列表</item>
+    </string-array>
+
+    <string-array name="generalRecordTypes">
+        <item>Normal</item>
+        <item>Constant</item>
+    </string-array>
+
+    <string-array name="generalRecordTypesForSearch">
+        <item>All ShownType</item>
+        <item>Normal</item>
+        <item>Constant</item>
+    </string-array>
+
+    <string-array name="usedFor">
+        <item>添加为检索条件</item>
+        <item>添加或修改标签集</item>
+    </string-array>
+
+</resources>

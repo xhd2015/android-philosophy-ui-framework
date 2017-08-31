@@ -1,0 +1,8 @@
+<resources>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="issue_size">20dp</dimen>
+    <dimen name="detailReviewSize">50dp</dimen>
+    <dimen name="detailAlarmSize">60dp</dimen>
+    <dimen name="default_text_size">14sp</dimen>
+    <dimen name="tagGap">10dp</dimen>
+</resources>

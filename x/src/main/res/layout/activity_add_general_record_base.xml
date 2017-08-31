@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="fulton.shaw.android.x.activities.AddGeneralRecordTagBlogActivity"
+    android:id="@+id/rootView"
+    >
+
+    <FrameLayout
+        android:id="@+id/customContentContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </FrameLayout>
+
+    <!--标题和内容至少有一个不为空-->
+
+    <fulton.shaw.android.x.views.TextSwitchableTextView
+        android:id="@+id/switchTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/button_general"
+        app:selection="0"
+        app:titles="显示附加选项 &gt;;;;隐藏附加选项"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/additionalSettings"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:id="@+id/customAdditionalContainer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            </FrameLayout>
+        </LinearLayout>
+    </ScrollView>
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/nagetiveButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/silver"
+            android:text="取消"
+            />
+        <Button
+            android:id="@+id/positiveButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/red_little"
+            android:text="确认"
+            />
+
+
+    </LinearLayout>
+</LinearLayout>

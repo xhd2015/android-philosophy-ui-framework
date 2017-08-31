@@ -20,7 +20,7 @@ abstract class Token {
 
     /**
      * Reset the data represent by this token, for reuse. Prevents the need to create transfer objects for every
-     * piece of data, which immediately get GCed.
+     * piece of data, which immediately getByGetter GCed.
      */
     abstract Token reset();
 
@@ -71,11 +71,11 @@ abstract class Token {
         protected String normalName; // lc version of tag name, for case insensitive tree build
         private String pendingAttributeName; // attribute names are generally caught in one hop, not accumulated
         private StringBuilder pendingAttributeValue = new StringBuilder(); // but values are accumulated, from e.g. & in hrefs
-        private String pendingAttributeValueS; // try to get attr vals in one shot, vs Builder
+        private String pendingAttributeValueS; // try to getByGetter attr vals in one shot, vs Builder
         private boolean hasEmptyAttributeValue = false; // distinguish boolean attribute from empty string value
         private boolean hasPendingAttributeValue = false;
         boolean selfClosing = false;
-        Attributes attributes; // start tags get attributes on construction. End tags get attributes on first new attribute (but only for parser convenience, not used).
+        Attributes attributes; // start tags getByGetter attributes on construction. End tags getByGetter attributes on first new attribute (but only for parser convenience, not used).
 
         @Override
         Tag reset() {

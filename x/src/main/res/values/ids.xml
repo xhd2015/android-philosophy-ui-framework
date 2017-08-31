@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item type="id" name="contentAdapterView" />
+    <item type="id" name="iconImageView" />
+
+    <item type="id" name="switchButton" />
+    <item type="id" name="expand"/>
+    <item type="id" name="collasp"/>
+
+    <item type="id" name="positiveButton" />
+    <item type="id" name="nagetiveButton" />
+    <item type="id" name="addButton"/>
+    <item type="id" name="titleTextView" />
+    <item type="id" name="customViewContainer"/>
+    <item type="id" name="adderViewContainer"/>
+</resources>

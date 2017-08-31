@@ -359,7 +359,7 @@ final class CharacterReader {
             hash = 31 * hash + val[offset++];
         }
 
-        // get from cache
+        // getByGetter from cache
         final int index = hash & cache.length - 1;
         String cached = cache[index];
 

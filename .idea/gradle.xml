@@ -9,6 +9,9 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/mytestapplication" />
+            <option value="$PROJECT_DIR$/tellmelibrary" />
+            <option value="$PROJECT_DIR$/x" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+    <ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:id="@+id/modelInfoContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+
+                </LinearLayout>
+
+                <android.support.design.widget.FloatingActionButton
+                    android:id="@+id/modifyButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    app:fabSize="mini"
+                    app:srcCompat="?android:attr/actionModeFindDrawable"
+                    android:layout_gravity="right|bottom"
+                    />
+
+            </FrameLayout>
+
+            <include layout="@layout/model_control_seperator"/>
+
+    <LinearLayout
+        android:id="@+id/controlInfoContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_weight="1"
+        >
+        <include layout="@layout/show_list_detail_reference"
+                 android:layout_width="match_parent"
+                 android:layout_height="match_parent"
+                 android:id="@+id/referenceListContainer"
+            />
+        <include layout="@layout/control_control_detail_seperator"/>
+        <include layout="@layout/show_list_detail_review"
+            android:layout_width="match_parent"
+                 android:layout_height="match_parent"
+                 android:id="@+id/reviewListContainer"
+            />
+        <include layout="@layout/control_control_detail_seperator"/>
+        <include layout="@layout/show_list_detail_tag"
+                 android:layout_width="match_parent"
+                 android:layout_height="match_parent"
+                 android:id="@+id/tagListContainer"
+            />
+        <include layout="@layout/control_control_detail_seperator"/>
+        <include layout="@layout/show_list_detail_alarm"
+                 android:layout_width="match_parent"
+                 android:layout_height="match_parent"
+                 android:id="@+id/alarmListContainer"
+            />
+    </LinearLayout>
+
+</LinearLayout>
+    </ScrollView>

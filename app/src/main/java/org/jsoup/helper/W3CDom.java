@@ -148,7 +148,7 @@ public class W3CDom {
                 namespaces.put(prefix, attr.getValue());
             }
 
-            // get the element prefix if any
+            // getByGetter the element prefix if any
             int pos = el.tagName().indexOf(":");
             return pos > 0 ? el.tagName().substring(0, pos) : "";
         }

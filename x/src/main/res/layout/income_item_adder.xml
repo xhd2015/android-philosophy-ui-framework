@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <fulton.shaw.android.x.views.IconTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:title="选择类型"
+        app:src="@drawable/ic_search_black_24dp"
+        />
+
+    <Spinner
+        android:id="@+id/incomeTypeSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:entries="@array/incomeType"/>
+
+    <EditText
+        android:id="@+id/recordEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="金额"
+        android:inputType="number"
+        />
+
+    <EditText
+        android:id="@+id/reasonEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="备注信息"
+        android:minLines="3"
+        />
+    <fulton.shaw.android.x.views.IconTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:title="时间(可选)"
+        app:src="@drawable/ic_search_black_24dp"
+        />
+
+    <fulton.shaw.android.x.views.TimePickerDialogWithTextView
+        android:id="@+id/eventTimeTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <include layout="@layout/two_buttons" android:id="@+id/twoButtons"/>
+
+</LinearLayout>

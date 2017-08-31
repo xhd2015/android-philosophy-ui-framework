@@ -1,24 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Tellme</string>
+    <string name="app_name">出行助手</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
     <string name="spinnerPrompt">Select One Resource</string>
+    <string name="leftArrows">&lt;&lt;</string>
+    <string name="rightArrows">&gt;&gt;</string>
 
-    <style name="ButtonText">
-        <item name="android:layout_width">fill_parent</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:textColor">#ffffff</item>
-        <item name="android:gravity">center</item>
-        <item name="android:layout_margin">3dp</item>
-        <item name="android:textSize">30dp</item>
-        <item name="android:textStyle">bold</item>
-        <item name="android:shadowColor">#000000</item>
-        <item name="android:shadowDx">1</item>
-        <item name="android:shadowDy">1</item>
-        <item name="android:shadowRadius">2</item>
-    </style>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
+
+    <string name="today">今天</string>
+    <string name="after_days">天后</string>
+    <string name="addIssue">添加事务</string>
+    <string name="addNote">添加笔记</string>
+    <string name="add_travel_plan_title">添加出行计划</string>
+    <string name="changeTravelPlanTitle">修改出行计划</string>
+    <string name="confirmChange">确认修改</string>
+    <string name="undetermined">未定</string>
+    <string name="soruce">出发地</string>
+    <string name="destination">目的地</string>
+    <string name="from">从</string>
+    <string name="to">到</string>
+    <string name="toSinlge">至</string>
+
+    <string name="buttonAdd">添加</string>
+    <string name="buttonCancel">取消</string>
+    <string name="yearName">年</string>
+    <string name="monthName">月</string>
+    <string name="dateName">日</string>
+    <string name="lastUpdate">最后更新:</string>
+    <string name="cannotAccess">无法获取</string>
+    <string name="weather">天气:</string>
+    <string name="updating">正在更新...</string>
+    <string name="suggestions">建议</string>
+    <string name="carWashing">洗车</string>
+    <string name="dressing">穿衣</string>
+    <string name="flu">感冒</string>
+    <string name="sport">运动</string>
+    <string name="travel">旅行</string>
+    <string name="commingTravelPlan">最近出行计划</string>
+    <string name="unknown">未知</string>
+
+    <string name="delete">删除</string>
+    <string name="modify">修改</string>
+
+    <string name="yourTravelPlans">您最近的出行计划</string>
+    <string name="yourIssues">您的待办事项</string>
+    <string name="yourNotes">今天的笔记</string>
+    <string name="selectACity">选择城市</string>
+    <string name="setAsDefault">设为默认</string>
+    <string name="province">省份</string>
+    <string name="city">城市</string>
+    <string name="hereToAddIssues">在此添加待办事项</string>
+    <string name="add">添加</string>
+    <string name="cancel">取消</string>
+    <string name="hereToAddNote">在此添加笔记</string>
+    <string name="nothing">无</string>
+    <string name="month">月</string>
+    <string name="year">年</string>
 </resources>
 

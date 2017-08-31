@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CustomViews">
+        <attr name="selectedIndex" format="integer" />
+        <attr name="colorList" format="reference"/>
+        <attr name="imageResList" format="reference"/>
+        <attr name="modifiable" format="boolean"/>
+        <attr name="customDateViewId" format="reference"/>
+        <attr name="customTimeViewId" format="reference"/>
+
+
+
+    </declare-styleable>
+    <declare-styleable name="IconTextView">
+        <!--iconTextView-->
+        <attr name="layoutMode" format="enum">
+            <enum name="titleFirst" value="0"/>
+            <enum name="iconFirst" value="1"/>
+        </attr>
+        <attr name="innerMargin" format="dimension"/>
+        <attr name="titleWeight" format="integer"/>
+        <attr name="iconWeight" format="integer"/>
+        <attr name="title" format="string"/>
+        <attr name="src" format="reference"/>
+        <attr name="titleSize" format="dimension"/>
+        <attr name="titleStyle" format="enum">
+            <enum name="normal" value="0"/>
+            <enum name="bold" value="1"/>
+            <enum name="italic" value="2"/>
+            <enum name="bold_italic" value="3"/>
+        </attr>
+        <attr name="iconHeight" format="enum|dimension">
+            <enum name="wrap_content" value="-2"/>
+            <enum name="match_parent" value="-1"/>
+        </attr>
+        <attr name="iconWidth" format="enum|dimension">
+            <enum name="wrap_content" value="-2"/>
+            <enum name="match_parent" value="-1"/>
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="TextSwitchableTextView">
+        <attr name="titles" format="reference|string"/>
+        <attr name="selection" format="integer"/>
+    </declare-styleable>
+
+    <!--the first is shown,the second is hidden.
+        selection has new way.
+    -->
+    <declare-styleable name="SwitchReflectedTextView">
+        <attr name="refId" format="reference"/>
+    </declare-styleable>
+
+</resources>

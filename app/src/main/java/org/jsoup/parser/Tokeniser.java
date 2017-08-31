@@ -165,7 +165,7 @@ final class Tokeniser {
                 return codeRef;
             }
         } else { // named
-            // get as many letters as possible, and look for matching entities.
+            // getByGetter as many letters as possible, and look for matching entities.
             String nameRef = reader.consumeLetterThenDigitSequence();
             boolean looksLegit = reader.matches(';');
             // found if a base named entity without a ;, or an extended entity with the ;.

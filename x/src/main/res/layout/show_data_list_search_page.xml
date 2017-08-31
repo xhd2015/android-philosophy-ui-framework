@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="搜索"
+        />
+
+    <fulton.shaw.android.x.views.SwitchReflectedTextView
+        android:id="@+id/conditionSwitcher"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/button_general"
+        app:refId="@+id/filterGroup"
+        app:selection="1"
+        app:titles="显示所有查询条件 &gt;;;;隐藏查询条件"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/filterGroup"
+        >
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <include layout="@layout/date_condition_view"
+                    android:id="@+id/dateConditionView"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                    />
+                <Spinner
+                    android:id="@+id/showTypeSpinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/generalRecordTypesForSearch"
+                    />
+
+                <TextView
+                    android:id="@+id/textView100"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:text="已选标签"
+                    />
+
+                <GridView
+                    android:id="@+id/selectedTags"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:nestedScrollingEnabled="true"
+                    android:numColumns="5"
+                    />
+
+                <fulton.shaw.android.x.views.SwitchReflectedTextView
+                    android:id="@+id/tagSetListSwitcher"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:refId="@+id/tagSetList"
+                    app:selection="1"
+                    app:titles="所有标签方案 >&gt;;;;隐藏标签方案"/>
+
+                <ListView
+                    android:id="@+id/tagSetList"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:nestedScrollingEnabled="true"
+                    />
+
+                <Spinner
+                    android:id="@+id/usedForSpinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/usedFor"
+                    />
+
+                <Spinner
+                    android:id="@+id/filterConditionSpinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/filterConditionTypes"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/tagsEditText"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:hint="输入标签(以空格分隔)"
+                        android:inputType="textMultiLine"
+                        android:minLines="1"/>
+
+                    <Button
+                        android:id="@+id/tagsButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="添加"/>
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+
+        <Button
+            android:id="@+id/positiveButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/red_little"
+            android:text="确认"
+            />
+
+    </LinearLayout>
+
+    <ExpandableListView
+        android:id="@+id/showList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbarSize="20dp"
+        />
+</LinearLayout>

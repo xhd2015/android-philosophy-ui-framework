@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="选择要设置的列表"
+        android:background="@color/button_general"
+        />
+
+    <Spinner
+        android:id="@+id/listSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:entries="@array/listType"
+        />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/button_general"
+        android:text="最小项数"/>
+
+    <EditText
+        android:id="@+id/minItemEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="最小项数"
+        android:inputType="number"/>
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/button_general"
+        android:text="最大项数"/>
+
+    <EditText
+        android:id="@+id/maxItemEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="最大项数(-1显示所有项)"
+        android:inputType="numberSigned"/>
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/button_general"
+        android:text="单位高度（像素）"/>
+
+    <EditText
+        android:id="@+id/unitHeightEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="单位高度"
+        android:inputType="number"/>
+</LinearLayout>

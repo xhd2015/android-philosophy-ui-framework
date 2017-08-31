@@ -1,0 +1,11 @@
+
+this list defines the standard views to be used in showing database data.
+NOTE: only the exact class is allowed,not thier subclasses.
+
+EditText
+TextView
+Spinner
+CheckBox
+RadioGroup
+
+& views defined under this directory

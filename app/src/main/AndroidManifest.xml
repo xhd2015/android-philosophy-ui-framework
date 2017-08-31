@@ -5,12 +5,18 @@
     android:versionName="1.0">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/icon"
+        android:icon="@mipmap/icon2"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/icon"
+        android:roundIcon="@mipmap/icon2"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
 
@@ -39,13 +45,49 @@
             android:name=".experiment.WeChatActivity"
             android:label="Wechat Like">
             <intent-filter>
-                <!--action android:name="android.intent.action.MAIN" /-->
-                <category android:name="android.intent.category.DEFAULT"/>
-                <!--category android:name="android.intent.category.LAUNCHER" /-->
+
+                <!-- action android:name="android.intent.action.MAIN" / -->
+                <category android:name="android.intent.category.DEFAULT" />
+                <!-- category android:name="android.intent.category.LAUNCHER" / -->
             </intent-filter>
         </activity>
-        <activity android:name=".experiment.CalendarActivity"
-            android:label="Calendar"
+        <activity
+            android:name=".experiment.ReuseableActivity"
+            android:label="Calendar">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name=".experiment.service.EchoIntentService"
+            android:exported="false" />
+
+        <receiver
+            android:name=".experiment.MyReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="fulton.show.android.maketoast" />
+            </intent-filter>
+        </receiver>
+
+        <activity android:name=".experiment.CrossFadingActivity" />
+
+        <provider
+            android:name=".experiment.MyContentProvider"
+            android:authorities="fulton.shaw.android.tellme.MyContentProvider"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity android:name=".experiment.ContentProviderActivity" />
+        <activity android:name=".experiment.MessageHandlerActivity" />
+        <activity android:name=".experiment.CalendarViewActivity" />
+        <activity android:name=".experiment.TestViewActivity" />
+        <activity android:name=".experiment.DateDetailActivity"
+            android:parentActivityName=".experiment.WeatherMainActivity"
+            />
+        <activity android:name=".experiment.WeatherMainActivity"
             >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -54,10 +96,25 @@
         </activity>
 
         <service
-            android:name=".experiment.EchoIntentService"
+            android:name=".experiment.service.GetWeatherInfoService"
             android:exported="false" />
 
+        <provider
+            android:name=".experiment.service.WeatherInfoProvider"
+            android:authorities="fulton.shaw.android.tellme.weather"
+            android:enabled="true"
+            android:exported="false" />
 
+        <receiver
+            android:name=".experiment.service.SystemDateChangedReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.DATE_CHANGED"/>
+                <action android:name="android.intent.action.TIME_SET"/>
+            </intent-filter>
+
+        </receiver>
     </application>
 
 </manifest>

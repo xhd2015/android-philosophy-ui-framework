@@ -1445,7 +1445,7 @@ enum HtmlTreeBuilderState {
     ForeignContent {
         boolean process(Token t, HtmlTreeBuilder tb) {
             return true;
-            // todo: implement. Also; how do we get here?
+            // todo: implement. Also; how do we getByGetter here?
         }
     };
 

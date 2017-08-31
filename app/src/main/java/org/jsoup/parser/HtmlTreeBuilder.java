@@ -158,7 +158,7 @@ public class HtmlTreeBuilder extends TreeBuilder {
         if (href.length() != 0) { // ignore <base target> etc
             baseUri = href;
             baseUriSetFromDoc = true;
-            doc.setBaseUri(href); // set on the doc so doc.createElement(Tag) will get updated base, and to update all descendants
+            doc.setBaseUri(href); // set on the doc so doc.createElement(Tag) will getByGetter updated base, and to update all descendants
         }
     }
 
@@ -178,7 +178,7 @@ public class HtmlTreeBuilder extends TreeBuilder {
             Element el = insertEmpty(startTag);
             stack.add(el);
             tokeniser.transition(TokeniserState.Data); // handles <script />, otherwise needs breakout steps from script data
-            tokeniser.emit(emptyEnd.reset().name(el.tagName()));  // ensure we get out of whatever state we are in. emitted for yielded processing
+            tokeniser.emit(emptyEnd.reset().name(el.tagName()));  // ensure we getByGetter out of whatever state we are in. emitted for yielded processing
             return el;
         }
         

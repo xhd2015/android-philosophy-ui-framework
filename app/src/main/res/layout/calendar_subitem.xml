@@ -4,27 +4,56 @@
     android:layout_height="70dp"
     android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/date_number"
-        style="@style/center_text_in_textview"
+    <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="15"
-        android:gravity="center"
-        android:text="1"
-        android:textAlignment="center"
-        android:textSize="40sp"
-        android:textStyle="bold"
-        android:background="@color/aqua_little"
-        />
+        >
+
+        <TextView
+            android:id="@+id/date_number"
+            style="@style/center_text_in_textview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/aqua_little"
+            android:gravity="center"
+            android:text="1"
+            android:textAlignment="center"
+            android:textSize="40sp"
+            android:textStyle="bold"
+            />
+
+        <TextView
+            android:id="@+id/importantIssuesNumber"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_gravity="top|right"
+            android:text="1"
+            android:gravity="top|right"
+            android:background="@color/transparent"
+            android:textColor="@color/color_days_issue_num"
+            />
+
+        <ImageView
+            android:id="@+id/weatherIndicator"
+            android:layout_width="13dp"
+            android:layout_height="15dp"
+            android:layout_gravity="bottom|right"
+
+            android:background="@color/transparent"
+            android:src="@drawable/sunny_vector"
+            />
+
+
+    </FrameLayout>
 
     <TextView
-        android:id="@+id/date_note"
+        android:id="@+id/mainFestivalName"
         style="@style/center_marquee"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="5"
-        android:background="@color/red_little"
+        android:background="@color/background_color_when_has_fest"
         android:text="Labor Day What is The fu"
         android:textSize="8sp"
 

@@ -13,7 +13,7 @@ import java.util.Map;
 /**
  * A Connection provides a convenient interface to fetch content from the web, and parse them into Documents.
  * <p>
- * To get a new Connection, use {@link org.jsoup.Jsoup#connect(String)}. Connections contain {@link Connection.Request}
+ * To getByGetter a new Connection, use {@link org.jsoup.Jsoup#connect(String)}. Connections contain {@link Connection.Request}
  * and {@link Connection.Response} objects. The request objects are reusable as prototype requests.
  * </p>
  * <p>

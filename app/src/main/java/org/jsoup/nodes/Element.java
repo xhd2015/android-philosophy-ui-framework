@@ -204,7 +204,7 @@ public class Element extends Node {
     /**
      * Get this element's child elements.
      * <p>
-     * This is effectively a filter on {@link #childNodes()} to get Element nodes.
+     * This is effectively a filter on {@link #childNodes()} to getByGetter Element nodes.
      * </p>
      * @return child elements. If this element has no children, returns an
      * empty list.
@@ -223,7 +223,7 @@ public class Element extends Node {
     /**
      * Get this element's child text nodes. The list is unmodifiable but the text nodes may be manipulated.
      * <p>
-     * This is effectively a filter on {@link #childNodes()} to get Text nodes.
+     * This is effectively a filter on {@link #childNodes()} to getByGetter Text nodes.
      * @return child text nodes. If this element has no text nodes, returns an
      * empty list.
      * </p>
@@ -248,7 +248,7 @@ public class Element extends Node {
     /**
      * Get this element's child data nodes. The list is unmodifiable but the data nodes may be manipulated.
      * <p>
-     * This is effectively a filter on {@link #childNodes()} to get Data nodes.
+     * This is effectively a filter on {@link #childNodes()} to getByGetter Data nodes.
      * </p>
      * @return child data nodes. If this element has no data nodes, returns an
      * empty list.
@@ -911,7 +911,7 @@ public class Element extends Node {
     }
 
     /**
-     * Gets the text owned by this element only; does not get the combined text of all children.
+     * Gets the text owned by this element only; does not getByGetter the combined text of all children.
      * <p>
      * For example, given HTML {@code <p>Hello <b>there</b> now!</p>}, {@code p.ownText()} returns {@code "Hello now!"},
      * whereas {@code p.text()} returns {@code "Hello there now!"}.

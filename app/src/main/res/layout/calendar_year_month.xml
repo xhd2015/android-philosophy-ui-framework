@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="bottom"
+    >
+
+
+    <TextView
+        android:id="@+id/yearView"
+        style="@style/center_text_in_textview"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:text="@string/year" />
+
+    <include
+        android:id="@+id/yearSelectView"
+        layout="@layout/number_select_view"/>
+
+    <TextView
+        android:id="@+id/monthView"
+        style="@style/center_text_in_textview"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:text="@string/month" />
+    <include
+        android:id="@+id/monthSelectView"
+        layout="@layout/number_select_view"/>
+
+
+
+</LinearLayout>

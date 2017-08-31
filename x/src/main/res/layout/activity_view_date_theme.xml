@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="fulton.shaw.android.x.activities.ViewDateThemeActivity"
+    android:orientation="vertical"
+    android:id="@+id/rootView"
+    >
+
+    <TextView
+        android:id="@+id/dateTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:background="@color/red_little"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@android:drawable/ic_notification_overlay"/>
+
+        <TextView
+            android:id="@+id/weatherTextView"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:hint="天气"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@android:drawable/ic_menu_myplaces"/>
+
+        <TextView
+            android:id="@+id/locationTextView"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:hint="地点"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"/>
+    </LinearLayout>
+
+    <RatingBar
+        android:id="@+id/levelRatingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:numStars="5"
+        android:stepSize="0.5"
+        />
+
+    <TextView
+        android:id="@+id/remarkTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:minLines="2"
+        android:hint="一针见血"
+        />
+
+    <include layout="@layout/control_control_detail_seperator"/>
+
+    <TextView
+        android:id="@+id/summaryTextVIew"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minLines="5"
+        android:hint="娓娓道来"
+        />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <fulton.shaw.android.x.views.IconTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:src="?android:attr/textSelectHandle"
+            app:title="收支表"
+            app:titleSize="20sp"
+            />
+
+        <ImageButton
+            android:id="@+id/addIncomeButton"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            app:srcCompat="@android:drawable/ic_input_add"
+            android:layout_gravity="right|center"
+            />
+
+    </FrameLayout>
+
+    <ListView
+        android:id="@+id/incomeList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</LinearLayout>

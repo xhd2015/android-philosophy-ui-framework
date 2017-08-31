@@ -1,0 +1,6 @@
+<resources>
+    <declare-styleable name="CircleView">
+        <attr name="radius" format="dimension"/>
+        <attr name="curveColor" format="color"/>
+    </declare-styleable>
+</resources>

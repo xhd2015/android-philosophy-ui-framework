@@ -10,7 +10,7 @@ import java.util.*;
 /**
  A list of {@link Element}s, with methods that act on every element in the list.
  <p>
- To get an {@code Elements} object, use the {@link Element#select(String)} method.
+ To getByGetter an {@code Elements} object, use the {@link Element#select(String)} method.
  </p>
 
  @author Jonathan Hedley, jonathan@hedley.net */
@@ -177,7 +177,7 @@ public class Elements extends ArrayList<Element> {
     /**
      * Get the combined text of all the matched elements.
      * <p>
-     * Note that it is possible to get repeats if the matched elements contain both parent elements and their own
+     * Note that it is possible to getByGetter repeats if the matched elements contain both parent elements and their own
      * children, as the Element.text() method returns the combined text of a parent and all its children.
      * @return string of all text: unescaped and no HTML.
      * @see Element#text()

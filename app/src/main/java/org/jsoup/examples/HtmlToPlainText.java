@@ -15,7 +15,7 @@ import java.io.IOException;
 
 /**
  * HTML to plain-text. This example program demonstrates the use of jsoup to convert HTML input to lightly-formatted
- * plain-text. That is divergent from the general goal of jsoup's .text() methods, which is to get clean data from a
+ * plain-text. That is divergent from the general goal of jsoup's .text() methods, which is to getByGetter clean data from a
  * scrape.
  * <p>
  * Note that this is a fairly simplistic formatter -- for real world use you'll want to embrace and extend.
@@ -42,7 +42,7 @@ public class HtmlToPlainText {
         HtmlToPlainText formatter = new HtmlToPlainText();
 
         if (selector != null) {
-            Elements elements = doc.select(selector); // get each element that matches the CSS selector
+            Elements elements = doc.select(selector); // getByGetter each element that matches the CSS selector
             for (Element element : elements) {
                 String plainText = formatter.getPlainText(element); // format that element to plain text
                 System.out.println(plainText);

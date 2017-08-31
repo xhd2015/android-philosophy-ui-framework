@@ -22,7 +22,7 @@
         <item name="android:textAlignment">center</item>
     </style>
 
-    <!--当文字过多时进行循环流动显示-->
+    <!--当文字过多时进行循环流动显示,俗称走马灯-->
     <style name="marquee">
         <item name="android:ellipsize">marquee</item>
         <item name="android:focusable">true</item>
@@ -40,6 +40,32 @@
         <item name="android:focusableInTouchMode">true</item>
         <item name="android:marqueeRepeatLimit">marquee_forever</item>
         <item name="android:singleLine">true</item>
+    </style>
+
+    <!--因为AS没有edit text这个可放置的控件，所以通过设置textview应用这个属性，得到输入框-->
+    <style name="edit_text">
+        <item name="android:background">@color/white</item>
+        <item name="android:textColor">@color/gray</item>
+        <item name="android:editable">true</item>
+    </style>
+
+    <style name="popupDialog" parent="Theme.AppCompat.Dialog">
+        <item name="android:windowNoTitle">false</item>
+        <item name="android:windowIsFloating">true</item>
+    </style>
+
+    <style name="ButtonText">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_margin">3dp</item>
+        <item name="android:textSize">30dp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:shadowColor">#000000</item>
+        <item name="android:shadowDx">1</item>
+        <item name="android:shadowDy">1</item>
+        <item name="android:shadowRadius">2</item>
     </style>
 
 </resources>

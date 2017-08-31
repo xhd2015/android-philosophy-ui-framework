@@ -176,7 +176,7 @@ public class Document extends Element {
         }
     }
 
-    // fast method to get first by tag name, used for html, head, body finders
+    // fast method to getByGetter first by tag name, used for html, head, body finders
     private Element findFirstElementByTagName(String tag, Node node) {
         if (node.nodeName().equals(tag))
             return (Element) node;

@@ -24,7 +24,7 @@ import fulton.shaw.android.tellme.newdesign.ViewPagerActivity;
 
 public class MainActivity extends FragmentActivity implements OnClickListener
 {
-	
+
 	FrameLayout mContainer;
 	SearchFragment mSearchPage;
 	DetailPageFragment mDetailedPage;
@@ -41,7 +41,7 @@ public class MainActivity extends FragmentActivity implements OnClickListener
 		setContentView(R.layout.activity_main);
 		
 		initFileds();
-		
+
 		FragmentManager m=getSupportFragmentManager();
 		FragmentTransaction t = m.beginTransaction();
 		

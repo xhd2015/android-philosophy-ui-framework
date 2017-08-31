@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Only For My Honour"
+        />
+    <fulton.shaw.android.x.views.SwitchReflectedTextView
+        android:id="@+id/conditionSwitcher"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/button_general"
+        app:titles="显示日期 &gt;;;;隐藏日期"
+        app:selection="1"
+        app:refId="@+id/dateConditionView"
+        />
+    <LinearLayout
+        android:id="@+id/dateConditionView"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <include
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/date_condition_view"
+            />
+        <Button
+            android:id="@+id/positiveButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/red_little"
+            android:text="确认"
+            />
+    </LinearLayout>
+
+
+
+    <ExpandableListView
+        android:id="@+id/showList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbarSize="20dp"
+        />
+</LinearLayout>

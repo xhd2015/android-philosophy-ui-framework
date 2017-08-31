@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@id/titleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="提醒"/>
+
+        <FrameLayout
+            android:layout_marginLeft="5dp"
+            android:id="@id/switchButton"
+            android:layout_width="30dp"
+            android:layout_height="20dp"
+            >
+
+            <ImageView
+                android:id="@+id/expand"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@android:drawable/presence_online"/>
+
+            <ImageView
+                android:id="@+id/collasp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:srcCompat="@android:drawable/presence_busy"
+                />
+        </FrameLayout>
+    </LinearLayout>
+
+    <ListView
+        android:id="@id/contentAdapterView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:nestedScrollingEnabled="true"
+        android:layout_weight="1"
+        />
+
+    <LinearLayout
+        android:id="@id/adderViewContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="visible"
+        >
+
+        <LinearLayout
+            android:id="@id/customViewContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+
+            <Spinner
+                android:id="@+id/repeatTypeSpinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:entries="@array/alarmRepeatTypes"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="开始时间:"/>
+
+                <fulton.shaw.android.x.views.DateTimePickerDialogWithTextView
+                    android:layout_marginStart="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:modifiable="true"
+                    android:id="@+id/startTimeTextView"
+                    >
+
+                </fulton.shaw.android.x.views.DateTimePickerDialogWithTextView>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="结束时间:"/>
+
+                <fulton.shaw.android.x.views.DateTimePickerDialogWithTextView
+                    android:layout_marginStart="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:modifiable="true"
+                    android:id="@+id/endTimeTextView"
+                    >
+
+                </fulton.shaw.android.x.views.DateTimePickerDialogWithTextView>
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/causingEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:minLines="2"
+                android:hint="添加通知备注"
+                android:maxLines="5"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right|center"
+            android:orientation="horizontal"
+            android:weightSum="10"
+            >
+
+            <Button
+                android:id="@id/nagetiveButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:background="@color/gray"
+                android:text="取消"/>
+
+            <Button
+                android:id="@id/positiveButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_weight="3"
+                android:background="@color/red_little"
+                android:text="确认"/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    <ImageButton
+        android:id="@+id/addButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:srcCompat="@android:drawable/ic_input_add"
+        android:onClick="onClickAddAlarmButton"
+        />
+
+</LinearLayout>

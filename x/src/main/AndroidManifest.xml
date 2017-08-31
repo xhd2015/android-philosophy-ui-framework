@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="fulton.shaw.android.x">
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".activities.ViewAsListActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".activities.AddPlanActivity"/>
+        <activity android:name=".activities.AddTravelNoteAcitivity"/>
+        <activity android:name=".activities.AddGeneralRecordTagProblemActivity"/>
+        <activity android:name=".activities.AddThingsPriceActivity"/>
+        <activity android:name=".activities.AddGeneralRecordTagDiaryActivity"/>
+        <activity android:name=".activities.AddGeneralRecordTagSaySomethingActivity"/>
+        <activity android:name=".activities.SeePriceActivity"/>
+        <activity android:name=".activities.ViewSubitemDetailActivity"/>
+        <activity android:name=".activities.TestActivity">
+        </activity>
+
+        <service
+            android:name=".services.SetAlarmService"
+            android:enabled="true"
+            android:exported="true">
+        </service>
+
+        <receiver
+            android:name=".broadcast.StartAlarmServiceBroadcast"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name=".services.TestStopPendingAlarmService"
+            android:exported="false">
+        </service>
+
+        <receiver
+            android:name=".broadcast.AlarmNotifyBroadcastReceiver"
+            android:enabled="true"
+            android:exported="true">
+        </receiver>
+
+        <activity android:name=".activities.ViewDateThemeActivity">
+        </activity>
+        <activity android:name=".activities.AddGeneralRecordTagBlogActivity">
+        </activity>
+        <activity android:name=".activities.AddGeneralRecordTagSaySomethingVeryNewActivity"/>
+        <activity android:name=".activities.ViewAsListUsingPages">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

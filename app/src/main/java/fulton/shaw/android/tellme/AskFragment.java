@@ -66,7 +66,7 @@ public class AskFragment extends Fragment{
 				intent.addCategory(Intent.CATEGORY_LAUNCHER); 
 				intent.setClassName(packageName, className); 
 				
-				intent.setData(Uri.parse(mMapper.get(mType.getSelectedItem().toString())));
+				intent.setData(Uri.parse(mMapper.getByGetter(mType.getSelectedItem().toString())));
 				startActivity(Intent.createChooser(intent, "Open..."));
 				*/ //old story
 				final String type=mType.getSelectedItem().toString();
